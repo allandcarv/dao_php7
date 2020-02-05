@@ -15,9 +15,13 @@ require_once("config.php");
 //$login->login("root", "12345678");
 //echo $login;
 
-$aluno = new Usuario();
-$aluno->setDeslogin('aluno');
-$aluno->setDessenha('123456');
-$aluno->insert();
+//$aluno = new Usuario();
+//$aluno->setDeslogin('aluno');
+//$aluno->setDessenha('123456');
+//$aluno->insert();
+//echo $aluno;
 
-echo $aluno;
+$usuario = new Usuario();
+$usuario->loadById(10);
+$usuario->update("professor", "abcdef");
+echo $usuario;
